@@ -14,8 +14,10 @@ Template Example
 <a href="mailto:enrico@westhill.co.uk?subject=Yes, i know {RefereeFirstName} {RefereeLastName}&body=Hi, my reference for {FirstName} is...">
 Click here</a> if you know {FirstName} and send to us a reference.
 
-# Example code
-Private Sub SendRegistrationEmail(ID As String, strEmail As String, strFirstName As String, strLastName As String)
+Example code
+===
+```
+    Private Sub SendRegistrationEmail(ID As String, strEmail As String, strFirstName As String, strLastName As String)
         Dim ext As New Extractor
         Dim strBody As String = ext.ReadTemplate(Server.MapPath("~/Registration/Template/RegistrationEmail.html"))
 
@@ -27,4 +29,5 @@ Private Sub SendRegistrationEmail(ID As String, strEmail As String, strFirstName
         Dim strSubject As String = ext.ExtractTagAndRemove(strBody, "title")
 
         SendEmail(strEmail, strSubject, strBody, ID)
-End Sub
+    End Sub
+```
