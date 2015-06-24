@@ -10,9 +10,11 @@ In the template you have a tag for the title of your email.
 
 Template Example
 ================
+```
 <title>Do you know {FirstName} {LastName}?</title>
 <a href="mailto:enrico@westhill.co.uk?subject=Yes, i know {RefereeFirstName} {RefereeLastName}&body=Hi, my reference for {FirstName} is...">
-Click here</a> if you know {FirstName} and send to us a reference.
+Click here</a> if you know {FirstName} and send to us a reference...
+```
 
 Example code
 ===
