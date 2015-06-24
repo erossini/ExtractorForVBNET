@@ -12,7 +12,8 @@ Template Example
 ================
 ```
 <title>Do you know {FirstName} {LastName}?</title>
-<a href="mailto:enrico@westhill.co.uk?subject=Yes, i know {RefereeFirstName} {RefereeLastName}&body=Hi, my reference for {FirstName} is...">
+<a href="mailto:enrico@westhill.co.uk?subject=Yes, i know {RefereeFirstName} {RefereeLastName}
+&body=Hi, my reference for {FirstName} is...">
 Click here</a> if you know {FirstName} and send to us a reference...
 ```
 
@@ -21,7 +22,7 @@ Example code
 ```
     Private Sub SendRegistrationEmail(ID As String, strEmail As String, strFirstName As String, strLastName As String)
         Dim ext As New Extractor
-        Dim strBody As String = ext.ReadTemplate(Server.MapPath("~/Registration/Template/RegistrationEmail.html"))
+        Dim strBody As String = ext.ReadTemplate(Server.MapPath("~/Template/RegistrationEmail.html"))
 
         Dim params As New Dictionary(Of String, String)
         params.Add("{FirstName}", strFirstName)
